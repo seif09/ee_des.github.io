@@ -1,0 +1,64 @@
+body, html {
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+overflow-x: hidden; /* Prevents horizontal scrollbar if image is wider than the screen */
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Sets the container height to be exactly the viewport height */
+    overflow: hidden; /* Ensures no part of the image spills outside the container */
+    text-align: center;
+}
+
+.background-image {
+    width: 100%; /* Ensure the image covers the full container width */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area without distorting its aspect ratio */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1; /* Ensure the image stays behind the content */
+}
+
+.header {
+    padding: 30px 10%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+
+.logo {
+    height: 60px; /* Adjust based on your logo's size */
+}
+
+.navbar {
+display: inline-flex;
+align-items: center;
+border: 1px solid blue;
+}
+
+.navbar a {
+text-decoration: none;
+color: black;
+margin: 0 10px;
+font-size: 16px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-content h1 {
+font-size: 4em;
+color: antiquewhite;
+}
+  

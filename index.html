@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destination Name</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .container {
+    width: 400px; /* Set the width of the container */
+    height: 200px; /* Set the height of the container */
+    border: 1px solid black; /* Add a border for visualization */
+    overflow: hidden; /* Hide any content that exceeds the container's dimensions */
+    position: relative; /* Positioning context for the child elements */
+    margin: 20px auto;
+}
+
+.container img {
+    max-width: none; /* Allow the image to exceed its original size */
+    max-height: none; /* Allow the image to exceed its original size */
+    width: auto; /* Reset width */
+    height: auto; /* Reset height */
+    position: absolute; /* Position the image absolutely within its container */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%) scale(0.2); /* Translate and scale down the image */
+}
+.center{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.center p {
+    display: inline-block;
+    max-width: max-content;
+    border: 1px solid black;
+}
+
+</style>
+<body>
+
+<div class="image-container">
+    <img src="background.jpeg" alt="Background" class="background-image">
+    <header class="header">
+        <a href="homepage.html" class="logo-link">
+            <img src="logo.png" alt="Logo" class="logo">
+        </a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <button onclick="scrollToLastSection()">Go to Last Section</button>
+        </nav>
+    </header>
+    
+    <div class="main-content">
+        <h1>Hurghada</h1>
+    </div>
+</div>
+<div class="container">
+    <img src="upcoming.jpeg" alt="Image">
+</div>
+<div class="center">
+    <p>Hey man my name is Seif. </p>
+</div>
+
+<!-- Additional content goes here -->
+<section id="last-section" style="margin:50px; width: 300px; height: 300px; border: 1px solid black;">
+    <p>this is a test text</p>
+  <!-- Your next section content -->
+</section>
+<section id="section" style="margin:50px; width: 300px; height: 300px; border: 1px solid black;">
+    <p>this is a test text</p>
+  <!-- Your next section content -->
+</section>
+
+</body>
+<script>
+    function scrollToLastSection() {
+        var lastSection = document.getElementById('last-section');
+        lastSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+</script>
+</html>
